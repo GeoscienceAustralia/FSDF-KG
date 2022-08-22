@@ -27,7 +27,9 @@
   dcterms:modified "2021-07-27"^^xsd:date ;
   skos:prefLabel "FSDF common elements ontology"@en ;
   sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF-KG"^^xsd:anyURI ;
-  skos:changeNote "NC 2021-07-27: changed rdfs:labels to skos:prefLabels, as per AGOP profile. Changed license crom CC0 to CC-BY-4 as per govt regs"@en
+  skos:changeNote 
+    "NC 2021-07-27: changed rdfs:labels to skos:prefLabels, as per AGOP profile. Changed license crom CC0 to CC-BY-4 as per govt regs"@en , 
+    "NC 2022-08-22: harmonised capitalisation of prefLabels; fixed some typos"@en
 .
 common:ContactDetails
   a owl:Class ;
@@ -242,7 +244,7 @@ common:address
   a owl:ObjectProperty ;
   rdfs:comment "rdfs:subPropertyOf locn:address"@en ;
   rdfs:domain common:Contact ;
-  skos:prefLabel "Address"@en ;
+  skos:prefLabel "address"@en ;
   skos:definition "An address provided as free text."@en ;
 .
 
@@ -250,7 +252,7 @@ common:suburb
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range rdfs:Literal ;
-  skos:prefLabel "Suburb"@en ;
+  skos:prefLabel "suburb"@en ;
   skos:definition "A suburb provided as free text."@en ;
 .
 
@@ -258,7 +260,7 @@ common:attributeDate
   a owl:DatatypeProperty ;
   skos:definition "This is the date of the latest primary source material used to initially assign, or subsequently change or confirm the value of, one of the attributes of the feature."@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Attribute Date"@en ;
+  skos:prefLabel "attribute date"@en ;
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .
@@ -267,7 +269,7 @@ common:attributeSource
   a owl:ObjectProperty ;
   skos:definition "This is the name of the latest primary source material used to populate the attribute field/s of a feature."@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Attribute Source"@en ;
+  skos:prefLabel "attribute source"@en ;
   rdfs:subPropertyOf dcterms:source ;
 .
 
@@ -290,7 +292,7 @@ common:custodianAgency
   a owl:ObjectProperty ;
   skos:definition "The agency or organisation for the source of this feature"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Custodian Agency"@en ;
+  skos:prefLabel "custodian agency"@en ;
   rdfs:range skos:Concept ;
 .
 
@@ -298,7 +300,7 @@ common:custodianLicensing
   a owl:ObjectProperty ;
   skos:definition "Specific licensing relating to this feature"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Custodian Licensing"@en ;
+  skos:prefLabel "custodian licensing"@en ;
   rdfs:subPropertyOf dcterms:license ;
 .
 
@@ -314,14 +316,14 @@ common:featureDataProvenance
   a owl:DatatypeProperty ;
   skos:definition "Where the data for this feature came from"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Feature Data Provenance"@en ;
+  skos:prefLabel "feature data provenance"@en ;
 .
 
 common:featureDate
   a owl:DatatypeProperty ;
   skos:definition "This is the date of the latest primary source material where the position of a particular feature was added, verified, or subsequently changed."@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Feature Date"@en ;
+  skos:prefLabel "feature date"@en ;
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .
@@ -330,7 +332,7 @@ common:featureSource
   a owl:ObjectProperty ;
   skos:definition "This is the name of the latest primary source used to add, update or verify a features existence or position. In most cases, this would be imagery (satellite, orthophotography, World Imagery)."@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Feature Source"@en ;
+  skos:prefLabel "feature source"@en ;
   rdfs:subPropertyOf dcterms:source ;
 .
 
@@ -338,7 +340,7 @@ common:featureSubType
   a owl:ObjectProperty ;
   skos:definition "An identifier for the type of feature represented"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Feature sub-type"@en ;
+  skos:prefLabel "feature sub-type"@en ;
   rdfs:subPropertyOf dcterms:type ;
 .
 
@@ -429,7 +431,7 @@ common:loadingDate
   a owl:DatatypeProperty ;
   skos:definition "Date of data loaded into national model"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Loading Date"@en ;
+  skos:prefLabel "loading date"@en ;
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .
@@ -439,7 +441,7 @@ common:name
 
 EXAMPLE The official legal name for the INSPIRE Directive is \"Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)\""""@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Name"@en ;
+  skos:prefLabel "name"@en ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf rdfs:label ;
   skos:definition "Name of the resource."@en ;
@@ -469,7 +471,7 @@ common:operationalStatus
   a owl:ObjectProperty ;
   skos:definition " The Operational status of the feature"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Operational Status"@en ;
+  skos:prefLabel "operational status"@en ;
   rdfs:range skos:Concept ;
 .
 common:organisationName
@@ -483,7 +485,7 @@ common:planimetricAccuracy
   a owl:DatatypeProperty ;
   skos:definition "The standard deviation of the horizontal positional accuracy"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Planimetric Accuracy"@en ;
+  skos:prefLabel "planimetric accuracy"@en ;
   rdfs:range cdt:ucum ;
 .
 common:positionName
@@ -503,7 +505,7 @@ common:hasRelatedParty
 common:recordTime
   a owl:ObjectProperty ;
   skos:definition "Time interval (period) at which this version of the spatial object was inserted or changed in the spatial data set"@en ;
-  skos:prefLabel "Record time"@en ;
+  skos:prefLabel "record time"@en ;
   rdfs:range time:Interval ;
 .
 common:role
@@ -531,14 +533,14 @@ common:sourceJurisdiction
   a owl:ObjectProperty ;
   skos:definition "The jurisdiction of the source feature"@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Source Jurisdiction"@en ;
+  skos:prefLabel "source jurisdiction"@en ;
   rdfs:range skos:Concept ;
 .
 common:sourceUFI
   a owl:DatatypeProperty ;
   skos:definition "The unique identifier of the feature as represented in the source "@en ;
   rdfs:domain common:Feature ;
-  skos:prefLabel "Source UFI"@en ;
+  skos:prefLabel "source UFI"@en ;
   rdfs:subPropertyOf dcterms:identifier ;
 .
 common:specificReference
@@ -553,19 +555,19 @@ common:telephoneFacsimile
   rdfs:domain common:Contact ;
   rdfs:range xsd:string ;
   skos:definition "Number of a facsimile machine of the organisation or individual."@en ;
-  skos:prefLabel "Fax number."@en ;
+  skos:prefLabel "fax number"@en ;
 .
 common:telephoneVoice
   a owl:DatatypeProperty ;
   rdfs:domain common:Contact ;
   rdfs:range xsd:string ;
   skos:definition "Telephone number of the organisation or individual."@en ;
-  skos:prefLabel "Telephone number."@en ;
+  skos:prefLabel "telephone number"@en ;
 .
 common:validTime
   a owl:ObjectProperty ;
   skos:definition "Time interval (period) at which this version of the object was/will be valid in the world"@en ;
-  skos:prefLabel "Valid time"@en ;
+  skos:prefLabel "valid time"@en ;
   rdfs:range time:Interval ;
 .
 common:verticalAccuracy
@@ -593,9 +595,21 @@ common:website
   sdo:identifier "https://orcid.org/0000-0002-4643-7289"^^xsd:anyURI ;
   sdo:name "Irina Bastrakova" ;
 .
+<https://orcid.org/0000-0002-8742-7730>
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car"@en ;
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:affiliation <https://kurrawong.net> ;
+.
+<https://kurrawong.net>
+    a sdo:Organization ;
+    sdo:name "Kurrawong AI" ;
+    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
+    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
+.
 cdt:ucum
   a rdfs:Datatype ;
-  rdfs:comment "scaled number, expressed as decimal-space-UCUMcode"@en ;
+  rdfs:comment "scaled number, expressed as decimal-space-UCUM code"@en ;
   rdfs:isDefinedBy <https://ci.mines-stetienne.fr/lindt/v3/custom_datatypes> ;
   skos:definition """UCUM Datatype - Datatype to encode measurements in a simple literal.
 
@@ -604,4 +618,5 @@ Lexical space - Concatenation of the lexical form of an xsd:decimal, optionally 
 Value space-	The set of pairs (v, u) such that v is a real number and u is any unit with magnitude 1 regarding the base units of Section 4.2 of [UCUM].
 
 Lexical-to-value mapping - The first part of the lexical form defines a number v = m × 10e where m is represented by the mandatory xsd:decimal and e is represented by the optional xsd:integer, or equal to 0 if omitted. The second part of the lexical form defines a unit u = r·b where r is the magnitude of u regarding the base units of Section 4.2 of [UCUM]. The lexical-to-value mapping maps the lexical form to the pair (v × r, b)."""@en ;
+  skos:prefLabel "UCUM datatype"@en ;
 .
