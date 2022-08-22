@@ -26,13 +26,13 @@
 ont:
   a owl:Ontology ;
   dcterms:created "2018-03-07"^^xsd:date ;
-  dcterms:creator <https://linked.data.gov.au/org/surround> ;
+  dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
   dcterms:modified "2021-06-10"^^xsd:date ;
   dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
   dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
   dcterms:rights "(c) Australian Government (ICSM), 2021" ;  
   vann:preferredNamespacePrefix "fsdf" ;
-  skos:prefLabel "FSDF ontology"@en ;
+  skos:prefLabel "FSDF Ontology"@en ;
   owl:imports <https://linked.data.gov.au/def/fsdf/common> ;
   owl:versionIRI <https://linked.data.gov.au/def/fsdf/1.1> ;
   owl:versionInfo "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph. This version imports the FSDF common elements ontology" ;
@@ -46,10 +46,17 @@ Also provided here are common properties for FSDF datasets and their contents, s
   sdo:codeRepository "https://github.com/surroundaustralia/fsdf-kg"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/org/surround>
-  a sdo:Organization ;
-  sdo:name "SURROUND Australia Pty Ltd" ;
-  sdo:url "https://surround.com"^^xsd:anyURI ;
+<https://orcid.org/0000-0002-8742-7730>
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car"@en ;
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:affiliation <https://kurrawong.net> ;
+.
+<https://kurrawong.net>
+    a sdo:Organization ;
+    sdo:name "Kurrawong AI" ;
+    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
+    sdo:url "https://kurrawong.net"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/anzlic>
@@ -190,7 +197,7 @@ fsdf:affectsAgency
   rdfs:domain fsdf:Mandate ;
   rdfs:range fsdf:Agency ;
   skos:definition "A Agency that is subject to the instructions of this Mandate"@en ;
-  skos:prefLabel "affects Agency"@en ;
+  skos:prefLabel "affects agency"@en ;
   skos:example """# example from the FSDF datagraph Mandates
 # Here a particular Mandate affects a particular Agency
 mandates:clp-1994
@@ -219,7 +226,7 @@ fsdf:hasPrimaryFuel
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range fsdf:Fuel ;
-  skos:prefLabel "Primary Fuel"@en ;
+  skos:prefLabel "primary fuel"@en ;
   skos:definition "The primary fuel type used by a generator"@en ;
 .
 
@@ -227,7 +234,7 @@ fsdf:hasPrimarySubFuel
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range fsdf:Fuel ;
-  skos:prefLabel "Primary Sub-fuel"@en ;
+  skos:prefLabel "primary sub-fuel"@en ;
   skos:definition "The primary sub-fuel type used by a generator"@en ;
 .
 
@@ -235,7 +242,7 @@ fsdf:hasGeneratorNumber
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range xsd:integer ;
-  skos:prefLabel "Generator Number"@en ;
+  skos:prefLabel "generator number"@en ;
   skos:definition "The generator number for electricity generation infrastructure"@en ;
 .
 
@@ -243,7 +250,7 @@ fsdf:hasEmbeddedNetworkOperator
   a owl:ObjectProperty ;
   rdfs:domain geo:Feature ;
   rdfs:range rdfs:Literal ;
-  skos:prefLabel "Embedded Network Operator"@en ;
+  skos:prefLabel "embedded network operator"@en ;
   skos:definition "The embedded network operator identifier for electricity generation infrastructure"@en ;
 .
 
