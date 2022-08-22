@@ -3,7 +3,7 @@
 # prefix: fsdf
 
 @prefix fsdf: <https://linked.data.gov.au/def/fsdf/> .
-@prefix asgs: <https://linked.data.gov.au/def/asgs#> .
+@prefix asgs: <https://linked.data.gov.au/def/asgs/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -23,19 +23,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-ont:
+<https://linked.data.gov.au/def/fsdf>
   a owl:Ontology ;
   dcterms:created "2018-03-07"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
-  dcterms:modified "2021-06-10"^^xsd:date ;
+  dcterms:modified "2022-08-22"^^xsd:date ;
   dcterms:publisher <https://linked.data.gov.au/org/anzlic> ;
   dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
   dcterms:rights "(c) Australian Government (ICSM), 2021" ;  
   vann:preferredNamespacePrefix "fsdf" ;
   skos:prefLabel "FSDF Ontology"@en ;
   owl:imports <https://linked.data.gov.au/def/fsdf/common> ;
-  owl:versionIRI <https://linked.data.gov.au/def/fsdf/1.1> ;
-  owl:versionInfo "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph. This version imports the FSDF common elements ontology" ;
+  owl:versionIRI <https://linked.data.gov.au/def/fsdf/1.2> ;
+  owl:versionInfo 
+    "This 1.0 is an early version of the ontology but is a great departure from the 0.5 version that was published in 2018. This version concentrates on defining the FSDF concepts, not listing all of the FSDF datasets which are listed in a separate data graph within the overall FSDF Knolwedge Graph. This version imports the FSDF common elements ontology"@en ,
+    "1.2: use of slash IRI, not hash"@en ;
   skos:definition """An ontology describing the concepts relevant to the [ANZLIC - The Spatial  Information Council](https://www.anzlic.gov.au)s' Foundation Spatial Data Framework (FSDF) project which is "a common reference for the assembly and maintenance of Australian and New Zealand foundation level spatial data".
   
 This contology contains a number of classes relevant to dataset description, management and provenance, such as `Dataset`, `Mandate` (laws/policies causing the generation of datasets), `Agency` (government bodies that own and create datasets) and `Jurisdition` (government bodies that authority within a domain). Additionally, properties that link these classes, such as `affectsAgency` (linking a `Mandate` to an `Agency`).

@@ -7,11 +7,11 @@
 # prefix: net
 
 @prefix cdt: <https://w3id.org/cdt/> .
-@prefix common: <https://linked.data.gov.au/def/fsdf/common#> .
+@prefix common: <https://linked.data.gov.au/def/fsdf/common/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix net: <https://linked.data.gov.au/def/fsdf/network#> .
+@prefix net: <https://linked.data.gov.au/def/fsdf/network/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -31,7 +31,7 @@
   Adapted from http://inspire.ec.europa.eu/ont/net."""@en ;
   dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
   dcterms:rights "(c) Australian Government (ICSM), 2021" ;
-  dcterms:modified "2021-07-28"^^xsd:date ;
+  dcterms:modified "2022-08-22"^^xsd:date ;
   dcterms:source <https://raw.githubusercontent.com/inspire-eu-rdf/inspire-rdf-vocabularies/master/net/net.ttl> ;
   skos:prefLabel "FSDF Network ontology"@en ;
   owl:imports dcterms: ;
@@ -40,7 +40,8 @@
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <https://linked.data.gov.au/def/fsdf/common> ;
   sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF-KG"^^xsd:anyURI ;
-  skos:changeNote "NC 2021-07-28: changed rdfs:labels to skos:prefLabels, as per AGOP profile. Changed license crom CC0 to CC-BY-4 as per govt regs"@en
+  owl:versionIRI <https://linked.data.gov.au/def/fsdf/network/1.2> ;
+  owl:versionInfo "NC 2021-07-28: changed rdfs:labels to skos:prefLabels, as per AGOP profile. Changed license crom CC0 to CC-BY-4 as per govt regs"@en
 .
 net:ConnectionType
   a owl:Class ;
@@ -386,7 +387,7 @@ net:endNode
 net:fictitious
   a owl:DatatypeProperty ;
   rdfs:domain net:Link ;
-  skos:prefLabel "fictitious centreline?"@en ;
+  skos:prefLabel "fictitious centreline"@en ;
   rdfs:range xsd:boolean ;
   owl:equivalentProperty <http://inspire.ec.europa.eu/ont/net#Link.fictitious> ;
   skos:definition "Indicator that the centreline geometry of the link is a straight line with no intermediate control points &ndash; unless the straight line represents the geography in the resolution of the data set appropriately."@en ;

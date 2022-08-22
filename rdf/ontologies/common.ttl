@@ -2,7 +2,7 @@
 # prefix: common
 
 @prefix cdt: <https://w3id.org/cdt/> .
-@prefix common: <https://linked.data.gov.au/def/fsdf/common#> .
+@prefix common: <https://linked.data.gov.au/def/fsdf/common/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ex: <http://example.org/my/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -24,12 +24,13 @@
   skos:definition "A small ontology for the 'common' properties of FSDF, mostly relating to lifecycle, quality, and citation information"@en ;
   dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
   dcterms:rights "(c) Australian Government (ICSM), 2021" ;
-  dcterms:modified "2021-07-27"^^xsd:date ;
+  dcterms:modified "2022-08-22"^^xsd:date ;
   skos:prefLabel "FSDF common elements ontology"@en ;
   sdo:codeRepository "https://github.com/GeoscienceAustralia/FSDF-KG"^^xsd:anyURI ;
-  skos:changeNote 
+  owl:versionIRI <https://linked.data.gov.au/def/fsdf/common/1.2> ;
+  owl:versionInfo 
     "NC 2021-07-27: changed rdfs:labels to skos:prefLabels, as per AGOP profile. Changed license crom CC0 to CC-BY-4 as per govt regs"@en , 
-    "NC 2022-08-22: harmonised capitalisation of prefLabels; fixed some typos"@en
+    "NC 2022-08-22: harmonised capitalisation of prefLabels; fixed some typos; use of slash IRI, not hash"@en ;
 .
 common:ContactDetails
   a owl:Class ;
